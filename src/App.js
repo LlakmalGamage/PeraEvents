@@ -1,13 +1,16 @@
-import logo_uop from './crest.UOP.png';
+import { BrowserRouter, Routes, Route } from 'react-router-dom'; 
 import './App.css';
+import { ToastContainer } from 'react-toastify';
+import MainPage from './Components/pages/Home_page';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo_uop} className="uop-logo" alt="logo" />
-      </header>
-    </div>
+    <BrowserRouter>
+      <ToastContainer />
+      <Routes>
+        <Route path="/" element={<MainPage />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
